@@ -30,14 +30,17 @@ import android.webkit.ValueCallback;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebViewClient;
+import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.Toast;
 import java.io.File;
 import java.io.IOException;
 
 public class WebViewLoader extends AppCompatActivity {
+
     //Web view
-    private WebViewLoader web;
+    private WebView web;
+
     //API / PWA URL
     String webUrl = "https://sandbox.devlan.co.ke/inventory/pwa/";
 
