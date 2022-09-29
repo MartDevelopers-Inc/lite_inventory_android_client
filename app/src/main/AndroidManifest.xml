@@ -18,7 +18,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LiteInventory">
         <activity
-            android:name=".WebView"
+            android:name=".WebViewLoader"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
