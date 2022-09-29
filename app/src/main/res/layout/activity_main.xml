@@ -23,7 +23,7 @@
         android:layout_width="368dp"
         android:layout_height="199dp"
         android:fontFamily="monospace"
-        android:text="Lite Inventory"
+        android:text="Lite \n Inventory MIS"
         android:textAlignment="center"
         android:textColor="#8BC34A"
         android:textSize="35dp"
