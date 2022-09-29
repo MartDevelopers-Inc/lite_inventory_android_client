@@ -68,7 +68,7 @@ public class WebViewLoader extends AppCompatActivity {
         setContentView(R.layout.activity_web_view);
 
         //Load Web view
-        web = (WebViewLoader) findViewById(R.id.auth);
+        web = (WebView) findViewById(R.id.auth);
         web.loadUrl(webUrl);
 
         WebSettings mywebsettings = web.getSettings();
