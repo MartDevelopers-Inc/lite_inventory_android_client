@@ -39,7 +39,7 @@ public class WebViewLoader extends AppCompatActivity {
     //Web view
     private WebViewLoader web;
     //API / PWA URL
-    String webUrl = "https://sandbox.devlan.co.ke/inventory/pwa";
+    String webUrl = "https://sandbox.devlan.co.ke/inventory/pwa/";
 
     public Context context;
 
@@ -116,7 +116,7 @@ public class WebViewLoader extends AppCompatActivity {
         }
         else {
             //When Internet Connectivity Is Active, Load application URL
-            web.loadUrl("https://sandbox.devlan.co.ke/RedLife/views/");
+            web.loadUrl("https://sandbox.devlan.co.ke/inventory/pwa/");
         }
 
         //Runtime External storage permission for saving download files
@@ -154,25 +154,6 @@ public class WebViewLoader extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "Downloading Report", Toast.LENGTH_LONG).show();
             }});
 
-        // Swiper Gesture
-        SwipeToRefresh.setOnRefreshListener(
-                new SwipeRefreshLayout.OnRefreshListener() {
-                    @Override
-                    public void onRefresh() {
-                        web.reload();
-                    }
-                });
-        //Prevent Infinite Loading
-        SwipeToRefresh.getViewTreeObserver().addOnScrollChangedListener(mOnScrollChangedListener =
-                new ViewTreeObserver.OnScrollChangedListener() {
-                    @Override
-                    public void onScrollChanged() {
-                        if (web.getScrollY() == 0)
-                            SwipeToRefresh.setEnabled(true);
-                        else
-                            SwipeToRefresh.setEnabled(false);
-                    }
-                });
 
         //Improve Web View Performance
         web.getSettings().setLoadsImagesAutomatically(true);
